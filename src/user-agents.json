@@ -83,7 +83,8 @@
             "de.danoeh.antennapod/1.7.3b (Linux;Android 8.0.0) ExoPlayerLib/2.9.3"
         ],
         "info_url": "https://github.com/AntennaPod/AntennaPod",
-        "os": "android"
+        "os": "android",
+        "developer_notes": "The de.danoeh version was used when streaming only, and will been phased out as of v2"
     },
     {
         "user_agents": [
@@ -322,6 +323,18 @@
     },
     {
         "user_agents": [
+          "BroadwayPodcastNetwork/iOS"
+        ],
+        "app": "Broadway Podcast Network",
+        "description": "The Broadway Podcast Network iOS App",
+        "device": "phone",
+        "examples": [
+          "BroadwayPodcastNetwork/iOS"
+        ],
+        "os": "ios"
+    },
+    {
+        "user_agents": [
             "^Cast(?:b|B)ox/.+Android"
         ],
         "app": "CastBox",
@@ -417,13 +430,33 @@
         ],
         "app": "Deezer",
         "device": "phone",
-        "os": "android"
+        "os": "android",
+        "examples": [
+            "Deezer/6.2.2.80 (Android; 9; Mobile; fr) samsung SM-G950F",
+            "Deezer/6.2.3.96 (Android; 10; Mobile; fr) samsung SM-A405FN"
+        ],
+        "info_url": "https://play.google.com/store/apps/details?id=deezer.android.app"
+    },
+    {
+        "user_agents": [
+            "^Deezer/.*CFNetwork/"
+        ],
+        "app": "Deezer",
+        "os": "ios",
+        "examples": [
+            "Deezer/8.13.0.4 CFNetwork/1125.2 Darwin/19.4.0"
+        ],
+        "info_url": "https://apps.apple.com/us/app/deezer-music-podcast-player/id292738169"
     },
     {
         "user_agents": [
             "^Deezer"
         ],
-        "app": "Deezer"
+        "app": "Deezer",
+        "examples": [
+            "Deezer/4.20.0 (Electron; windows/10.0.18362; Desktop; fr)",
+            "Deezer/4.20.0 (Electron; osx/10.14.6; Desktop; fr)"
+        ]
     },
     {
         "user_agents": [
@@ -791,9 +824,30 @@
     },
     {
         "user_agents": [
-            "^iHeartRadio/"
+            "^iHeartRadio/.*Android"
         ],
-        "app": "iHeartRadio"
+        "app": "iHeartRadio",
+        "os": "android",
+        "examples": [
+            "iHeartRadio/9.19.0 (Android 10; SM-G960U Build/QP1A.190711.020)",
+            "iHeartRadio/9.19.0 (Android 9; SM-G950U Build/PPR1.180610.011)"
+        ],
+        "info_url": "https://play.google.com/store/apps/details?id=com.clearchannel.iheartradio.controller"
+    },
+    {
+        "user_agents": [
+            "^iHeartRadio/.* CFNetwork/",
+            "^iHeartRadio/.* iOS"
+        ],
+        "app": "iHeartRadio",
+        "os": "ios",
+        "examples": [
+            "iHeartRadio/2020052002 CFNetwork/1125.2 Darwin/19.4.0",
+            "iHeartRadio/9.20.0 (iPhone; iOS 13.4.1; iPhone11,8)",
+            "iHeartRadio/9.20.0 (iPad; iOS 13.4.1; iPad6,12)",
+            "iHeartRadio/9.7.0 (iPod touch; iOS 12.4.5; iPod7,1)"
+        ],
+        "info_url": "https://apps.apple.com/us/app/iheart-radio-music-podcasts/id290638154"
     },
     {
         "user_agents": [
@@ -1145,15 +1199,39 @@
     },
     {
         "user_agents": [
-            "^PodCruncher/"
+            "^PodCruncher/.* CFNetwork/"
         ],
-        "app": "PodCruncher"
+        "app": "PodCruncher",
+        "os": "ios",
+        "examples": [
+            "PodCruncher/3.7.1 CFNetwork/1125.2 Darwin/19.4.0",
+            "PodCruncher/3.7.1 CFNetwork/978.0.7 Darwin/18.7.0"
+        ],
+        "info_url": "https://apps.apple.com/us/app/podcruncher-podcast-player/id421894356"
     },
     {
         "user_agents": [
-            "^Podbean/"
+            "^Podbean/Android App",
+            "^Podbean/Android generic"
         ],
-        "app": "Podbean"
+        "app": "Podbean",
+        "os": "android",
+        "examples": [
+            "Podbean/Android App 7.6.4 (http://podbean.com),1927526fe23b5acf535b3e91b64cee95",
+            "Podbean/Android generic 1.1.2 (http://podbean.com),9376c517335ded9a716022cc1f15c884"
+        ],
+        "info_url": "https://play.google.com/store/apps/details?id=com.podbean.app.podcast"
+    },
+    {
+        "user_agents": [
+            "^Podbean/iOS"
+        ],
+        "app": "Podbean",
+        "os": "ios",
+        "examples": [
+            "Podbean/iOS (http://podbean.com) 5.2.0 - 19c4ff292bd09cd2ccbad22cc6755a45"
+        ],
+        "info_url": "https://apps.apple.com/us/app/podbean-podcast-app-player/id973361050"
     },
     {
         "user_agents": [
@@ -1399,6 +1477,16 @@
     },
     {
         "user_agents": [
+            "Sonnet"
+        ],
+        "app": "Sonnet",
+        "description": "Sonnet is a simple, easy to use podcast app aimed at new listeners",
+        "os": "android",
+        "info_url": "https://sonnet.fm",
+        "svg": "sonnet.svg"
+    },    
+    {
+        "user_agents": [
             "Sonos"
         ],
         "app": "Sonos",
@@ -1478,13 +1566,57 @@
     },
     {
         "user_agents": [
+            "^TuneIn Radio/.*;Android"
+        ],
+        "examples": [
+            "TuneIn Radio/24.2 (Linux;Android 10) ExoPlayerLib/2.11.4"
+        ],
+        "app": "TuneIn Radio",
+        "os": "android",
+        "info_url": "https://play.google.com/store/apps/details?id=tunein.player"
+    },
+    {
+        "user_agents": [
+            "^TuneIn Radio Pro/.*;Android"
+        ],
+        "examples": [
+            "TuneIn Radio Pro/23.3.2 (Linux;Android 5.1.1) ExoPlayerLib/2.10.7"
+        ],
+        "app": "TuneIn Pro",
+        "os": "android",
+        "info_url": "https://play.google.com/store/apps/details?id=radiotime.player"
+    },
+    {
+        "user_agents": [
+            "^TuneIn(%20| )Radio/.*(CFNetwork/|iPhone)"
+        ],
+        "examples": [
+            "TuneIn Radio/1366 CFNetwork/1121.2.2 Darwin/19.3.0",
+            "TuneIn Radio/18.1; iPhone12,8; iOS/13.4.1",
+            "TuneIn%20Radio/1383 CFNetwork/1125.2 Darwin/19.4.0"
+        ],
+        "app": "TuneIn Radio",
+        "os": "ios",
+        "info_url": "https://apps.apple.com/us/app/tunein-radio-live-news-music/id418987775"
+    },
+    {
+        "user_agents": [
+            "^TuneIn(%20| )Radio(%20| )Pro/.*CFNetwork/"
+        ],
+        "examples": [
+            "TuneIn Radio Pro/1361 CFNetwork/1121.2.2 Darwin/19.3.0",
+            "TuneIn%20Radio%20Pro/1383 CFNetwork/1125.2 Darwin/19.4.0"
+        ],
+        "app": "TuneIn Pro",
+        "os": "ios",
+        "info_url": "https://apps.apple.com/us/app/tunein-pro-radio-sports/id319295332"
+    },
+    {
+        "user_agents": [
             "^TuneIn"
         ],
         "examples": [
-            "TuneIn Radio/24.2 (Linux;Android 10) ExoPlayerLib/2.11.4",
-            "TuneIn Radio/1366 CFNetwork/1121.2.2 Darwin/19.3.0",
-            "TuneIn Radio/18.1; iPhone12,8; iOS/13.4.1",
-            "TuneIn Radio Pro/1361 CFNetwork/1121.2.2 Darwin/19.3.0"
+            "TuneIn Radio"
         ],
         "app": "TuneIn Radio",
         "info_url": "https://tunein.com/",
