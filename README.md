@@ -1,11 +1,14 @@
 # User agent list
 
-A list of apps, services and bots that consume podcast **audio**. (A human view is [over here](https://podnews.net/article/podcast-app-useragents)); and this data is used by a number of podcast hosts to assist with their analytics.
+A list of apps, services and bots that consume podcast **audio**. This data is used by a number of podcast hosts to assist with their analytics.
+
+One public example is [this page at Podnews](https://podnews.net/about/podcast-stats) which uses this data alongside the RSS UA.
 
 ## Contributing to the list
 
-For now, the simplest way is to add to the file at `src/user-agents.json`. Each app, service or
-bot should have its own entry.
+The simplest way is to add to the file at `src/user-agents.json`.
+
+Each app, service or bot should have its own entry. The user_agents should be as exclusive as possible, to avoid multiple matches.
 
 Each entry _must_ contain the following properties:
 
@@ -15,7 +18,7 @@ should be validated. Backslashes ("\\") should be escaped, so instead of `^Echo\
 Each entry _can_ contain one of the following properties:
 
 * `bot` (boolean): set to `true` when the requesting agent is a bot (no need to set to `false` otherwise).
-* `app` (string): set to the human-readable name of the app or service.
+* `app` (string): set to the human-readable name of the app or service. We do not set this string if it's just a library or framework.
 * `device` (string): set to a slug of the device type, usually one of
   * `pc` (meaning a desktop or laptop computer running Linux, macOS or Windows)
   * `phone`
@@ -49,17 +52,15 @@ Android tablets are rarer, almost all requests will be via Android phones, but w
 
 ## Parsing order
 
-Right now, there isn't a great deal of thought put into the order... it's sort-of alphabetical depending on
-circumstance. It might be worth ordering based on the accuracy of each set of regexes.
+Multiple matches should ideally not happen for anything that has an app name; so parsing order shouldn't matter. For devices and OS, you mat discover that multiple matches will give you more accurate data, but you should hopefully only see one app name.
 
-## Future plans
+## Testing
 
-To stop the list becoming unwieldy, in the future it may be possible to separate out the apps into separate
-files, that are then combined together automatically. That makes it harder to make a static list available
-via Github, but it's possible to run a static site and use a CI script -- a script that is called when code
-is committed to this repository -- to combine the files and generate the static file.
+The ```/src``` folder contains a subfolder ```/tests``` with unit tests per programming languages. Unit tests should try to compile all the regular expressions. In case of failure, the problematic regular expressions should be fixed before pushing the changes.
 
-Happy to accept advice or actual code to make this happen :)
+### python
 
-Also, if we do use multiple files, it will become necessary to have some sort of `priority` or `accuracy`
-property for each agent, so that they can be combined in parsing order.
+```bash
+# Running tests with pytest
+pytest
+```
