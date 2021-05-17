@@ -177,6 +177,7 @@
         ],
         "os": "ios",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -189,6 +190,7 @@
         "device": "pc",
         "os": "macos",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -201,6 +203,7 @@
         ],
         "os": "ios",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -213,6 +216,7 @@
         ],
         "os": "ios",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -225,6 +229,7 @@
         ],
         "os": "homepodos",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -237,6 +242,7 @@
         ],
         "os": "tvos",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -246,6 +252,7 @@
         "device": "watch",
         "os": "watchos",
         "description": "AppleCoreMedia library",
+        "info_url": "https://podnews.net/article/applecoremedia-user-agent",
         "developer_notes": "This is a library used by a number of apps when progressively downloading podcasts. It is not (just) Apple Podcasts, and should not be treated as an Apple Podcasts useragent"
     },
     {
@@ -633,7 +640,7 @@
         "examples": [
             "doubleTwist CloudPlayer"
         ],
-        "app": "doubleTwitch CloudPlayer",
+        "app": "doubleTwist CloudPlayer",
         "device": "phone",
         "info_url": "https://www.doubletwist.com/cloudplayer",
         "os": "android"
@@ -671,7 +678,17 @@
         "os": "macos",
         "device": "pc"
     },
-        {
+    {
+        "user_agents": [
+            "downcast feed consumer/"
+        ],
+        "app": "Downcast",
+        "examples": [
+            "downcast feed consumer/0.0.175; (mode=dev; id=u2NgjBSPM6; downcast.fm)"
+        ],
+        "bot": true
+    },
+    {
         "user_agents": [
             "Xbox.+Edge/"
         ],
@@ -1186,6 +1203,33 @@
         "app": "Laughable",
         "device": "phone",
         "os": "ios"
+    },
+    {
+        "user_agents": [
+            "^lesindesradios$"
+        ],
+        "app": "Les Indés Radios",
+        "os": "ios",
+        "device": "phone",
+        "description": "Les Indés Radios is a radio app, available on multiple devices and OSs",
+        "info_url": "https://www.lesindesradios.fr/",
+        "examples": [
+            "lesindesradios"
+        ]
+    },
+    {
+        "user_agents": [
+            "^lesindesradios/.*\\(Linux;Android"
+        ],
+        "app": "Les Indés Radios",
+        "os": "android",
+        "device": "phone",
+        "description": "Les Indés Radios is a radio app, available on multiple devices and OSs",
+        "info_url": "https://www.lesindesradios.fr/",
+        "examples": [
+            "lesindesradios/9.1.0 (Linux;Android 8.0.0) ExoPlayerLib/2.9.2",
+            "lesindesradios/9.1.0 (Linux;Android 11) ExoPlayerLib/2.9.2"
+        ]
     },
     {
         "user_agents": [
@@ -2550,6 +2594,38 @@
         "bot": true,
         "examples": [
             "AAABot"
+        ]
+    },
+    {
+        "user_agents": [
+            "^MixerBox\/.*Android"
+        ],
+        "app": "MixerBox",
+        "os": "android",
+        "examples": [
+            "MixerBox/12.33 (Linux;Android 11) ExoPlayerLib/2.11.1"
+        ]
+    },
+    {
+        "user_agents": [
+        "^MixerBox\/.*iOS"
+       ],
+        "name": "MixerBox",
+        "os": "ios",
+        "examples": [
+            "MixerBox/807.iOS (iPhone; iOS 14.4; en_US)"
+        ]
+    },
+    {
+        "user_agents": [
+            "^Podcastindex\\.org/"
+        ],
+        "app": "Podcastindex.org",
+        "bot": true,
+        "svg": "podcast-index.svg",
+        "info_url": "https://podcastindex.org/",
+        "examples": [
+            "Podcastindex.org/v0.3.3 (Aggrivate)"
         ]
     }
 ]
