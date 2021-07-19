@@ -144,6 +144,17 @@
     },
     {
         "user_agents": [
+            "^Android_AudioNow/"
+        ],
+        "app": "Audio Now",
+        "examples": [
+            "Android_AudioNow"
+        ],
+        "info_url": "https://audionow.de/",
+        "os": "android"
+    },
+    {
+        "user_agents": [
             "^AndroidDownloadManager"
         ],
         "os": "android"
@@ -569,13 +580,16 @@
     },
     {
         "user_agents": [
-            "Deezer/.*Android;"
+            "^Deezer/.*Android;",
+            "^DeezerJukebox/.+Android"
         ],
         "app": "Deezer",
+        "device": "phone",
         "os": "android",
         "examples": [
             "Deezer/6.2.2.80 (Android; 9; Mobile; fr) samsung SM-G950F",
-            "Deezer/6.2.3.96 (Android; 10; Mobile; fr) samsung SM-A405FN"
+            "Deezer/6.2.3.96 (Android; 10; Mobile; fr) samsung SM-A405FN",
+            "DeezerJukebox/6.2.26.58 (Linux;Android 10) ExoPlayerLib/2.12.1"
         ],
         "info_url": "https://play.google.com/store/apps/details?id=deezer.android.app"
     },
@@ -853,6 +867,19 @@
     },
     {
         "user_agents": [
+            "Goodpods.Android"
+        ],
+        "examples": [
+            "Goodpods.Android / 2.2.2"
+        ],
+        "app": "Goodpods",
+        "os": "android",
+        "description": "The social podcasting app",
+        "developer_notes": "This app uses an RSS useragent of similar to PostmanRuntime7220",
+        "info_url": "https://www.goodpods.com/"
+    },
+    {
+        "user_agents": [
             "Googlebot/",
             "Googlebot-Video/",
             "Googlebot-Image/"
@@ -894,14 +921,16 @@
     },
     {
         "user_agents": [
-            "(iPhone|iPad|iPod touch).*GSA/",
+            "^GooglePodcasts/(iPhone|iPad|iPod touch|!Android).*GSA\/",
             "^Podcasts$",
-            "^GooglePodcasts/"
+            "^GooglePodcasts\/.*(iPhone|iPad|iPod touch)"
         ],
         "app": "Google Podcasts",
         "description": "Google Podcasts on iOS",
         "examples": [
-            "GooglePodcasts/2.0.2%20iPod_touch/13.4.1%20hw/iPod9_1",
+            "GooglePodcasts/2.0.2 iPod_touch/13.4.1 hw/iPod9_1",
+            "GooglePodcasts/2.0.10 iPhone/14.6 hw/iPhone12_1",
+            "GooglePodcasts/2.0.10 iPhone/14.6 hw/iPhone13_3",
             "Mozilla/5.0 (iPhone; CPU iPhone OS 13_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/107.0.310639584 Mobile/15E148 Safari/604.1",
             "Mozilla/5.0 (iPod touch; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/107.0.310639584 Mobile/15E148 Safari/601.1"
         ],
@@ -910,7 +939,7 @@
     },
     {
         "user_agents": [
-            "(?:Android;.+)?GSA/"
+            "(Android).*GSA\/"
         ],
         "app": "Google Podcasts",
         "os": "android",
@@ -1292,6 +1321,18 @@
         "app": "Listen5",
         "device": "phone",
         "os": "ios"
+    },
+    {
+        "user_agents": [
+            "Lisny"
+        ],
+        "app": "Lisny",
+        "os": "android",
+        "examples": [
+            "Lisny"
+        ],
+        "info_url": "https://www.lisny.com",
+        "description": "Lisny is a fast, beautiful and fun listening experience."
     },
     {
         "user_agents": [
@@ -1957,7 +1998,7 @@
     },
     {
         "user_agents": [
-            "Macintosh.*AppleWebKit(?!.*(Chrome\/)).*Safari/(?!.*(AdsBot/))"
+            "Macintosh.*AppleWebKit(?!.*(Chrome\/|GSA\/)).*Safari\/(?!.*(AdsBot\/))"
         ],
         "app": "Safari",
         "device": "pc",
@@ -1976,7 +2017,7 @@
     },
     {
         "user_agents": [
-            "iPhone.*AppleWebKit(?!.*(AdsBot|bingbot|CriOS)).*Safari/"
+            "iPhone.*AppleWebKit(?!.*(AdsBot|bingbot|CriOS|GSA\/)).*Safari\/"
         ],
         "app": "Safari",
         "device": "phone",
@@ -2627,5 +2668,26 @@
         "examples": [
             "Podcastindex.org/v0.3.3 (Aggrivate)"
         ]
+    },
+    {
+        "user_agents": [
+            "^sp-agent"
+        ],
+        "app": "Samsung Podcasts",
+        "info_url": "https://developer.samsung.com/podcasts",
+        "examples": [
+            "sp-agent"
+        ]
+    },
+    {
+        "user_agents": [
+            "^MixerBox\/"
+        ],
+        "app": "Mixerbox",
+        "info_url": "https://www.mixerbox.com/",
+        "examples": [
+            "MixerBox/869 CFNetwork/1300.1 Darwin/21.0.0"
+        ],
+        "developer_notes": "This app appears to use a RSS useragent of AmazonCloudFront (or it may simply be blank)"
     }
 ]
